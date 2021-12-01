@@ -34,23 +34,21 @@ class MembersController extends Controller
         return view('members.create');
     }
 
-    /**
-     * Store a new member in the storage.
-     *
-     * @param Illuminate\Http\Request $request
-     *
-     * @return Illuminate\Http\RedirectResponse | Illuminate\Routing\Redirector
-     */
+
     public function store(Request $request)
     {
 
 
-            $data = $this->getData($request);
+        $data = $this->getData($request);
 
-            Member::create($data);
+        Member::create($data);
+        if ($request->front_end) {
+            return back()
+                ->with('success_message', 'Form was successfully submitted.');
+        }
 
-            return redirect()->route('members.member.index')
-                ->with('success_message', 'Member was successfully added.');
+        return redirect()->route('members.member.index')
+            ->with('success_message', 'Member was successfully added.');
 
     }
 
@@ -95,13 +93,13 @@ class MembersController extends Controller
     {
 
 
-            $data = $this->getData($request);
+        $data = $this->getData($request);
 
-            $member = Member::findOrFail($id);
-            $member->update($data);
+        $member = Member::findOrFail($id);
+        $member->update($data);
 
-            return redirect()->route('members.member.index')
-                ->with('success_message', 'Member was successfully updated.');
+        return redirect()->route('members.member.index')
+            ->with('success_message', 'Member was successfully updated.');
 
     }
 
@@ -137,7 +135,7 @@ class MembersController extends Controller
     protected function getData(Request $request)
     {
         $rules = [
-                'applicant_name' => 'required|nullable|string|min:1',
+            'applicant_name' => 'required|nullable|string|min:1',
             'age' => 'numeric|nullable',
             'address' => 'string|min:1|nullable',
             'mobile_number' => 'required|nullable|numeric',

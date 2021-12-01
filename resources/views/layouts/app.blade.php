@@ -1,187 +1,216 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zxx">
 <head>
-    <!-- Required Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
+    <meta name="author" content="themefisher.com">
 
-    <!-- Page Title -->
+    <title>BBCS.WORLD</title>
 
-    <!-- Favicon Icon -->
-    <link rel="shortcut icon" href="favicon.png">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/all.css">
-    <!-- <script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/fontawesome.min.js"></script> -->
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/animate.css">
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/meanmenu.css">
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/slick.css">
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/nice-select.css">
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/countrySelect.css">
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/progress-bar.css">
-    <link rel="stylesheet" href="https://html.softtechitltd.com/sympatho/sympatho/assets/css/style.css">
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Icon Font Css -->
+    <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+    <!-- Slick Slider  CSS -->
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @yield('css')
 </head>
 
-<body>
-<!-- Preloader Starts -->
-<div class="preloader" id="preloader">
-    <div class="preloader-inner">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
+<body id="top">
+
+<header>
+    <div class="header-top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <ul class="top-bar-info list-inline-item pl-0 mb-0">
+                        <li class="list-inline-item"><a href="mailto:ahmedali0786@googlemail.com"><i
+                                    class="icofont-support-faq mr-2"></i>ahmedali0786@googlemail.com</a></li>
+                        <li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>British Bangladeshi Civil
+                            Society, UK
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-lg-right top-right-bar mt-2 mt-lg-0">
+                        <a href="tel:+44 7780 262130">
+                            <span>Call Now : </span>
+                            <span class="h4">+44 7780 262130</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    <nav class="navbar navbar-expand-lg navigation" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-inline-block" href="{{ route('app.index') }}">
+                <img src="images/bcsuk_logo.PNG" alt="" class="img-fluid" height="50px" width="80px">
 
-<!-- ScrollTop Button -->
-<div class="go-top-btn"><span><i class="fas fa-long-arrow-alt-up"></i></span></div>
+            </a>
+            <a  href="{{ route('app.index') }}">
+                <h1>BBCS.WORLD</h1>
+            </a>
 
-<!-- Header Section -->
-<header class="header-section home2-header">
-    <div class="container vector-container">
-        <div class="row align-items-center" id="mobile-menu-container">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                <div class="logo">
-                    <a href=""><img src="{{ asset('images/bbcsuklogo.png') }}" alt=""></a>
-                </div>
-            </div>
-            <div class="col-lg-7 md-none">
-                <div class="navigation">
 
-                    <nav id="mobile-menu">
-                        <ul class="main-menu">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
+                    aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icofont-navigation-menu"></span>
+            </button>
 
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
+            <div class="collapse navbar-collapse" id="navbarmain">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ route('app.index') }}">Home</a>
+                    </li>
 
-                            <li><a href="#">contact us</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-6 col-6">
-                <ul class="nav-right-btn">
-                    <li><a href="{{ route('app.donate_now') }}">Donation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('app.contact') }}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('app.gallery') }}">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('app.project') }}">Our Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('app.membership') }}">Membership</a></li>
                 </ul>
             </div>
         </div>
-        <div class="mobile-menu"></div>
-    </div>
-    @yield('hero')
+    </nav>
 </header>
-@yield('content')
-<footer class="footer-section padding-top-90">
-    <div class="container vector-container">
-        <img src="https://html.softtechitltd.com/sympatho/sympatho/assets/images/yellow-vector.png" class="yellow-vector" alt="">
-        <img src="https://html.softtechitltd.com/sympatho/sympatho/assets/images/dot-vector.png" class="dot-vector" alt="">
-        <img src="https://html.softtechitltd.com/sympatho/sympatho/assets/images/red-vector.png" class="red-vector" alt="">
-        <div class="row">
 
-            <div class="col-lg-3 col-md-6">
-                <div class="footer-first">
-                    <a href="home2.html"><img src="https://html.softtechitltd.com/sympatho/sympatho/assets/images/logo.png" class="logo" alt=""></a>
-                    <p class="home2-p-color">Lorem ipsum dolor sit ammet lorem ipsum dolor sit ammet lorem ipsum
-                        dolor sit ammet lorem ipsum dolor ssit ammet lorem ipsum dolor sit ammet</p>
-                    <div class="footer-social">
-                        <a href="#">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+@yield('content')
+<!-- footer Start -->
+<footer class="footer section gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mr-auto col-sm-6">
+                <div class="widget mb-5 mb-lg-0">
+                    <div class="logo mb-4">
+                        <img src="images/bcsuk_logo.PNG" alt="" class="img-fluid">
+                        <h1>BBCS.WORLD</h1>
                     </div>
+
+
+
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="other-links">
-                    <h3 class="home2-heading-color">Other Link</h3>
-                    <nav class="footer-nav">
-                        <ul>
-                            <li><a href="#">Nonprofit Resources</a></li>
-                            <li><a href="#">Corporate Giving Resources</a></li>
-                            <li><a href="#">Corporate Gift Cards</a></li>
-                            <li><a href="#">CSR made Simple</a></li>
-                            <li><a href="#">Start an Application</a></li>
-                        </ul>
-                    </nav>
+
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="widget mb-5 mb-lg-0">
+
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="donors-link">
-                    <h3 class="home2-heading-color">Donors</h3>
-                    <nav class="footer-nav">
-                        <ul>
-                            <li><a href="#">Give or Redeem Gift Cards</a></li>
-                            <li><a href="#">Donate in Honor</a></li>
-                            <li><a href="#">Project of the Month Club</a></li>
-                            <li><a href="#">Start a Fundraiser</a></li>
-                            <li><a href="#">Donor Resources</a></li>
-                        </ul>
-                    </nav>
+
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="widget mb-5 mb-lg-0">
+
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="footer-last">
-                    <h3 class="home2-heading-color">Get in Touch!</h3>
-                    <div class="widget-bottom">
-                        <img src="https://html.softtechitltd.com/sympatho/sympatho/assets/images/vector-09.png" alt="">
-                        <div class="widget-content">
-                            <p class="home2-p-color">287 N Willow St. Trenton, NJ, 08618 (Unlisted).</p>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget widget-contact mb-5 mb-lg-0">
+                    <h4 class="text-capitalize mb-3">Get in Touch</h4>
+                    <div class="divider mb-4"></div>
+
+                    <div class="footer-contact-block mb-4">
+                        <div class="icon d-flex align-items-center">
+                            <i class="icofont-email mr-3"></i>
+                            <span class="h6 mb-0">Support Available for 24/7</span>
                         </div>
+                        <h4 class="mt-2"><a href="mailto:ahmedali0786@googlemail.com">ahmedali0786@googlemail.com</a></h4>
                     </div>
-                    <div class="widget-bottom">
-                        <img src="https://html.softtechitltd.com/sympatho/sympatho/assets/images/home2-footer-mail-icon.png" alt="">
-                        <div class="widget-content">
-                            <p class="home2-p-color">supportsympatho@.com infosympaho@.com</p>
+
+                    <div class="footer-contact-block">
+                        <div class="icon d-flex align-items-center">
+                            <i class="icofont-support mr-3"></i>
+                            <span class="h6 mb-0">Always Open</span>
                         </div>
-                    </div>
-                    <div class="widget-bottom">
-                        <img src="https://html.softtechitltd.com/sympatho/sympatho/assets/images/vector78.png" alt="">
-                        <div class="widget-content">
-                            <p class="home2-p-color">Phone : 088 023546 879 Telephone : 65879046</p>
-                        </div>
+                        <h4 class="mt-2"><a href="tel:+44 7780 262130">+44 7780 262130
+                            </a></h4>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="footer-btm py-4 mt-5">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6">
+                    <div class="copyright text-white">
+                        &copy; Copyright Reserved to <span class="text-white"></span> by <a
+                            href="https://invoicepedia.com/" target="_blank" class="text-white">Create Invoice Online</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="subscribe-form text-lg-right mt-5 mt-lg-0">
+                        <form action="#" class="subscribe">
+                            <input type="text" class="form-control" placeholder="Your Email address">
+                            <a href="#" class="btn btn-main-2 btn-round-full">Subscribe</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <a class="backtop js-scroll-trigger" href="#top">
+                        <i class="icofont-long-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
-@yield('js')
-<!-- Javascript Files -->
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/jquery-3.5.1.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/bootstrap.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/slick.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/counterup.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/waypoints.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/easing.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/wow.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/jquery.magnific-popup.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/jquery.nice-select.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/jquery-ui.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/isotope.min.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/countrySelect.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/countdown.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/progress-bar.js"></script>
-<script src="https://html.softtechitltd.com/sympatho/sympatho/assets/js/vendor/jquery.meanmenu.js"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
-</body>
 
+
+<!--
+Essential Scripts
+=====================================-->
+
+
+<!-- Main jQuery -->
+<script src="plugins/jquery/jquery.js"></script>
+<!-- Bootstrap 4.3.2 -->
+<script src="plugins/bootstrap/js/popper.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugins/counterup/jquery.easing.js"></script>
+<!-- Slick Slider -->
+<script src="plugins/slick-carousel/slick/slick.min.js"></script>
+<!-- Counterup -->
+<script src="plugins/counterup/jquery.waypoints.min.js"></script>
+
+<script src="plugins/shuffle/shuffle.min.js"></script>
+<script src="plugins/counterup/jquery.counterup.min.js"></script>
+<!-- Google Map -->
+<script src="plugins/google-map/map.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+
+<script src="js/script.js"></script>
+<script src="js/contact.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 200
+        });
+    })
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry( elem, {
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 200
+    });
+
+    // element argument can be a selector string
+    //   for an individual element
+    var msnry = new Masonry( '.grid', {
+        // options
+    });
+</script>
+</body>
 </html>
