@@ -35,7 +35,7 @@ Route::get('/admin', function () {
     return redirect()->route('members.member.index');
 });
 
-Route::group(['prefix' => 'admin/members'], function () {
+Route::group(['prefix' => 'admin/members','middleware' => ['auth:web','verify_admin']], function () {
     Route::get('/', [MembersController::class, 'index'])->name('members.member.index');
     Route::get('/create', [MembersController::class, 'create'])->name('members.member.create');
     Route::get('/show/{member}', [MembersController::class, 'show'])->name('members.member.show')->where('id', '[0-9]+');

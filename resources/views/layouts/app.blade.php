@@ -56,7 +56,7 @@
                 <img src="images/bcsuk_logo.PNG" alt="" class="img-fluid" height="50px" width="80px">
 
             </a>
-            <a  href="{{ route('app.index') }}">
+            <a href="{{ route('app.index') }}">
                 <h1>BBCS.WORLD</h1>
             </a>
 
@@ -95,7 +95,6 @@
                     </div>
 
 
-
                 </div>
             </div>
 
@@ -121,7 +120,8 @@
                             <i class="icofont-email mr-3"></i>
                             <span class="h6 mb-0">Support Available for 24/7</span>
                         </div>
-                        <h4 class="mt-2"><a href="mailto:ahmedali0786@googlemail.com">ahmedali0786@googlemail.com</a></h4>
+                        <h4 class="mt-2"><a href="mailto:ahmedali0786@googlemail.com">ahmedali0786@googlemail.com</a>
+                        </h4>
                     </div>
 
                     <div class="footer-contact-block">
@@ -141,7 +141,8 @@
                 <div class="col-lg-6">
                     <div class="copyright text-white">
                         &copy; Copyright Reserved to <span class="text-white"></span> by <a
-                            href="https://invoicepedia.com/" target="_blank" class="text-white">Create Invoice Online</a>
+                            href="https://invoicepedia.com/" target="_blank" class="text-white">Create Invoice
+                            Online</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -193,6 +194,19 @@ Essential Scripts
 <script src="js/contact.js"></script>
 <script>
     $(document).ready(function () {
+
+        let url = "https://www.googleapis.com/youtube/v3/videos?part=status&id=xZjosn2u1gA&key=AIzaSyCJCyUD8gz-FEvEcrEcS9RdwC8tZUdlmhw";
+        /* $.ajax({
+             url: "https://www.googleapis.com/youtube/v3/videos?part=status&id=xZjosn2u1gA&key=AIzaSyCJCyUD8gz-FEvEcrEcS9RdwC8tZUdlmhw", success: function (result) {
+                 console.log('Test', result)
+             }
+         });*/
+        fetch(url).then(response => response.json())
+            .then(function (data) {
+                console.log('test', data.items[0].status.embeddable)
+            });
+
+
         $('.grid').masonry({
             // options
             itemSelector: '.grid-item',
@@ -200,7 +214,7 @@ Essential Scripts
         });
     })
     var elem = document.querySelector('.grid');
-    var msnry = new Masonry( elem, {
+    var msnry = new Masonry(elem, {
         // options
         itemSelector: '.grid-item',
         columnWidth: 200
@@ -208,7 +222,7 @@ Essential Scripts
 
     // element argument can be a selector string
     //   for an individual element
-    var msnry = new Masonry( '.grid', {
+    var msnry = new Masonry('.grid', {
         // options
     });
 </script>
