@@ -12,9 +12,7 @@
 
                         <p class="mb-4 pr-5">
                             Tireless working for saving life. Helping them who are saving life. </p>
-                        <div class="btn-container ">
-                            <a href="{{ route('app.donate_now') }}" class="btn btn-main-2 btn-icon btn-round-full">Donate Now <i class="icofont-simple-right ml-2  "></i></a>
-                        </div>
+
                     </div>
                 </div>
             </div>

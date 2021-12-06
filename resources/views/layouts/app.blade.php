@@ -75,7 +75,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('app.contact') }}">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('app.gallery') }}">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('app.project') }}">Our Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('app.membership') }}">Membership</a></li>
+                    <li class="nav-item btn-main-2 text-white btn-round-full"><a class="nav-link text-white mx-2" href="{{ route('app.donate_now') }}">Membership</a></li>
                 </ul>
             </div>
         </div>
