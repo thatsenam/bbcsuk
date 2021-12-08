@@ -1,1 +1,6 @@
-[]
+[
+    {
+        "model-name": "Gallery",
+        "resource-file": "galleries.json"
+    }
+]

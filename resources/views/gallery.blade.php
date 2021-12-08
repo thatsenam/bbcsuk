@@ -16,10 +16,10 @@
     <section class="fetaure-page mt-4">
         <div class="container">
             <div class="grid row">
-                @foreach($photos as $photo)
+                @foreach($galleries as $gallery)
                     <div class="grid-item col-6">
                         <div class="about-block-item mb-5 mb-lg-0">
-                            <img src="{{ $photo }}" alt="" class="img-fluid w-100 shadow-1-strong rounded mb-4">
+                            <img src="{{ asset('storage/'.$gallery->photo) }}" alt="" class="img-fluid w-100 shadow-1-strong rounded mb-4">
                         </div>
                     </div>
                 @endforeach

@@ -96,10 +96,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 {{--                        </ul>--}}
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('members.member.index') }}" class="nav-link active">
+                        <a href="{{ route('members.member.index') }}" class="nav-link ">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Members
+                                <span class="right badge badge-danger">{{ count(\App\Models\Member::all()) }}</span>
+                            </p>
+                        </a>
+                    </li>  <li class="nav-item">
+                        <a href="{{ route('galleries.gallery.index') }}" class="nav-link ">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Gallery
                                 <span class="right badge badge-danger">{{ count(\App\Models\Member::all()) }}</span>
                             </p>
                         </a>

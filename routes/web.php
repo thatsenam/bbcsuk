@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MembersController;
+use App\Http\Controllers\GalleriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,9 +12,11 @@ use App\Http\Controllers\MembersController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-php artisan create:resources Member  --with-migration
+    php artisan create:resources Member  --with-migration
 
 | php artisan resource-file:create Member --fields=id,applicant_name,age,address,mobile_number,email,spouse_name,spouse_age,spouse_email,children_1_name,children_1_age,children_1_mobile,children_1_email,children_2_name,children_2_age,children_2_mobile,children_2_email,reference_name
+
+php artisan resource-file:create Gallery --fields=id,title,photo
 
 */
 
@@ -45,3 +48,16 @@ Route::group(['prefix' => 'admin/members','middleware' => ['auth:web','verify_ad
     Route::delete('/member/{member}', [MembersController::class, 'index'])->name('members.member.destroy')->where('id', '[0-9]+');
 
 });
+
+Route::group(['prefix' => 'galleries'], function () {
+    Route::get('/', [GalleriesController::class, 'index'])->name('galleries.gallery.index');
+    Route::get('/create', [GalleriesController::class, 'create'])->name('galleries.gallery.create');
+    Route::get('/show/{gallery}',[GalleriesController::class, 'show'])->name('galleries.gallery.show')->where('id', '[0-9]+');
+    Route::get('/{gallery}/edit',[GalleriesController::class, 'edit'])->name('galleries.gallery.edit')->where('id', '[0-9]+');
+    Route::post('/', [GalleriesController::class, 'store'])->name('galleries.gallery.store');
+    Route::put('gallery/{gallery}', [GalleriesController::class, 'update'])->name('galleries.gallery.update')->where('id', '[0-9]+');
+    Route::delete('/gallery/{gallery}',[GalleriesController::class, 'index'])->name('galleries.gallery.destroy')->where('id', '[0-9]+');
+
+});
+
+

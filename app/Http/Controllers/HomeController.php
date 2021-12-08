@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -53,13 +54,9 @@ class HomeController extends Controller
     public function gallery()
     {
 
-        $photos = [];
-        foreach (range(1, 13) as $number) {
-            $photos[] = asset("images/gallery/photo_$number.jpg");
-        }
-
+        $galleries = Gallery::all();
 //        dd($photos);
-        return view('gallery', compact('photos'));
+        return view('gallery', compact('galleries'));
     }
 
     public function project()
